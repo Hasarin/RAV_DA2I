@@ -24,14 +24,9 @@ public class SnakeView extends JFrame {
 
 	}
 
-	public void AffichageGraphique(int id, String auteur, String titre, String texte) {
-
-		JTextArea text = new JTextArea(5, 20);
-		text.append("Titre: " + titre + "\n\n");
-		text.append("Auteur: " + auteur + "\n\n");
-		text.append("Texte: " + texte + "\n\n");
-		text.setEditable(false);
-		pan.add(text);
+	public void AffichageGraphique(int score) {
+		
+		
 		f.add(pan);
 		f.setVisible(true);
 	}
@@ -40,10 +35,10 @@ public class SnakeView extends JFrame {
 
 	}
 
-	public void printSnake(int id, String auteur, String titre, String texte) {
+	public void printSnake(int score) {
 		SnakeView bv = new SnakeView();
 		bv.ConfigFenetre();
-		bv.AffichageGraphique(id, auteur, titre, texte);
+		bv.AffichageGraphique(score);
 
 	}
 }

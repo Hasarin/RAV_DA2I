@@ -12,39 +12,25 @@ public class SnakeController {
 		this.view = view;
 	}
 
-	public String getSnakeTitre() {
-		return model.getTitre();
+	public int getSnakeScore(){
+		return model.getScore();
+		
 	}
-
-	public String getSnakeAuteur() {
-		return model.getAuteur();
+	
+	public boolean isSnakeVivant(){
+		return model.isVivant();
+		
 	}
-
-	public String getSnakeTexte() {
-		return model.getTexte();
+	public void SetSnakeScore(int score){
+		model.setScore(score);
+		
 	}
-
-	public int getSnakeId() {
-		return model.getId();
+	public void SetSnakeVivant(boolean vivant){
+		model.setVivant(vivant);
+		
 	}
-
-	public void setSnakeTitre(String titre) {
-		model.setTitre(titre);
-	}
-
-	public void setSnakeAuteur(String auteur) {
-		model.setAuteur(auteur);
-	}
-
-	public void setSnakeTexte(String texte) {
-		model.setTexte(texte);
-	}
-
-	public void setSnakeId(int id) {
-		model.setId(id);
-	}
-
+	
 	public void updateView() {
-		view.printSnake(model.getId(), model.getAuteur(), model.getTitre(), model.getTexte());
+		view.printSnake(model.getScore());
 	}
 }

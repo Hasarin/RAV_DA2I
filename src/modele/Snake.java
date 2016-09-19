@@ -2,48 +2,29 @@ package modele;
 
 public class Snake {
 	
-	private String titre;
-	private String auteur;
-	private String texte;
-	
-	
-	private int id;
+	private boolean vivant;
+	private int Score;
 	
 	
 
 /*----------------GETTERS -----------------------------------*/
-	public String getTitre() {
-		return titre;
+	public boolean isVivant() {
+		return vivant;
 	}
 	
-	public String getAuteur() {
-		return auteur;
+	public int getScore() {
+		return Score;
 	}
 	
-	public String getTexte() {
-		return texte;
-	}
 	
-	public int getId() {
-		return id;
-	}
 	
 	/*----------------SETTERS -----------------------------------*/
 
-	public void setTitre(String titre) {
-		this.titre = titre;
-	}
-
-	public void setAuteur(String auteur) {
-		this.auteur = auteur;
-	}
-
-	public void setTexte(String texte) {
-		this.texte = texte;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setVivant(boolean vivant) {
+		this.vivant = vivant;
 	}
 	
+	public void setScore(int score) {
+		Score = score;
+	}
 }

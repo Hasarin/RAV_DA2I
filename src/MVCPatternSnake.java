@@ -18,10 +18,6 @@ public class MVCPatternSnake {
 
 	private static Snake retriveSnakeFromDatabase() {
 		Snake Snake = new Snake();
-		Snake.setAuteur("Matthias");
-		Snake.setTitre("Snake test");
-		Snake.setTexte("Ceci est une Snake");
-		Snake.setId(1);
 		return Snake;
 	}
 
