@@ -5,20 +5,27 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 @SuppressWarnings("serial")
-public class BlagueView extends JFrame {
-	
+public class SnakeView extends JFrame {
+	JFrame f = new JFrame();
+	JPanel pan = new JPanel();
 
-	public BlagueView() {
+	public SnakeView() {
+
+	}
+
+	public void ConfigFenetre() {
+		f.setTitle("Snake");
+		f.setSize(400, 300);
+		f.setLocationRelativeTo(null);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public void Menu() {
 
 	}
 
 	public void AffichageGraphique(int id, String auteur, String titre, String texte) {
-		JFrame f = new JFrame("Blague2Fou");
-		f.setSize(400, 300);
-		f.setLocationRelativeTo(null);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JPanel pan = new JPanel();
 		JTextArea text = new JTextArea(5, 20);
 		text.append("Titre: " + titre + "\n\n");
 		text.append("Auteur: " + auteur + "\n\n");
@@ -26,12 +33,16 @@ public class BlagueView extends JFrame {
 		text.setEditable(false);
 		pan.add(text);
 		f.add(pan);
-
 		f.setVisible(true);
 	}
 
-	public void printBlague(int id, String auteur, String titre, String texte) {
-		BlagueView bv = new BlagueView();
+	public void ClearScreen() {
+
+	}
+
+	public void printSnake(int id, String auteur, String titre, String texte) {
+		SnakeView bv = new SnakeView();
+		bv.ConfigFenetre();
 		bv.AffichageGraphique(id, auteur, titre, texte);
 
 	}

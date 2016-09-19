@@ -1,6 +1,6 @@
 package modele;
 
-public class Blague {
+public class Snake {
 	
 	private String titre;
 	private String auteur;
